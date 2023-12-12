@@ -34,7 +34,7 @@ def upload_file():
 
         df = pd.read_csv(filepath)
 
-        return render_template('dashboard.html', table=df.head().to_html(), filename=filename)
+        return render_template('dashboard.html', table=df.head().to_html(classes='fl-table',index=False), filename=filename)
 
     else:
         return render_template('index.html', error='Invalid file type')

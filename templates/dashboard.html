@@ -9,11 +9,14 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- css link -->
-    <link rel="stylesheet" href="./style/styles.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/styles.css') }}">
+
+
     
-    <style>
+    <!-- <style>
         body {
             padding: 50px;
+            background-color: #f4f4f4
         }
         h1, h2, h3 {
             text-align: center;
@@ -26,14 +29,15 @@
             max-height: 400px;
             overflow-y: auto;
         }
-    </style>
+    </style> -->
 </head>
 <body>
 
-    <div class="container scrollable-table table table-striped">
+    <div>
         <thead>
             {{ table|safe }}
         </thead>
+        
         
 
         
@@ -55,6 +59,5 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
 </body>
 </html>
